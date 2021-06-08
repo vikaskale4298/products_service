@@ -70,6 +70,7 @@ public class ProductsController {
 
 	@DeleteMapping("/delete-products")
 	public Object deleteProducts(@RequestParam int id) {
+		logger.info("products Id:"+id);
 		return productsService.deleteProducts(id);
 	}
 
